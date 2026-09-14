@@ -1,19 +1,17 @@
 # GD Promotion Dashboard — August 2026
 
-Interactive overview and shop dashboards from `Promotion_GD_2026-08.xlsx` for 1–31 August 2026.
+Production website: https://pk-mud-promotion202608.netlify.app/
 
-Includes 420 shops and 134 promotion codes. Filters support date range, promotion type and shop. Charts display promotion names and codes.
+Administration: https://pk-mud-promotion202608.netlify.app/admin/
 
-The report covers promotion activity only. Net sales total THB 17,947,207. Quantity represents report units/sets, not receipts or customers.
+The original GitHub Pages addresses now redirect to these pages, preserving query filters. Login uses a shared server-side password; `/admin/` is entered manually. The owner must complete the one-time initial password setup before anyone can log in.
 
-## Website
+Source, build configuration, and authentication tests are in `production/`. The deployed Netlify project ID is `7544ad6f-b390-4e31-a0a4-83bd3bbe5fcb`. This release was deployed using a source ZIP through Netlify Drop; this repository is a source backup and is not yet linked for automatic Netlify deployment.
 
-`index.html` is a self-contained dashboard containing the reviewed dataset. Serve it unchanged with GitHub Pages. `.nojekyll` disables Jekyll processing.
+## Report scope
 
-For branch publishing, select the `main` branch and `/ (root)` under Settings → Pages. No build command or external data service is required.
-
-Updates are file snapshots, not a live connection to Excel. Replace `index.html` with a newly validated dashboard export to refresh the site.
+1–31 August 2026, 420 shops, 134 promotion codes. Promotion activity only. Net sales THB 17,947,207; quantity is report units/sets rather than receipts or customers. The build checks the reviewed snapshot SHA-256 before packaging.
 
 ## Access
 
-Anyone who can access the published dashboard can view and download its embedded data. A public website does not restrict access to the people who received its link.
+Netlify serves the report only after successful authentication. The earlier report and its GitHub commit history were already published publicly and remain public. A new website password cannot revoke old public copies. Do not commit passwords, session tokens, or the local first-setup code.
