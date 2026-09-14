@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ตั้งรหัสผ่าน · GD Promotion Admin</title><link rel="stylesheet" href="../password.css"></head>
+<body>
+<header class="brand"><div class="brand-icon">GD</div><div><strong>Promotion Dashboard</strong><small>จัดการรหัสผ่าน</small></div><span class="badge">Admin</span></header>
+<main class="stage"><div><section class="card" aria-labelledby="title">
+<div class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+<h1 id="title">ตั้งรหัสผ่าน</h1><p>กำหนดรหัสผ่านสำหรับเข้าใช้งานแดชบอร์ด</p>
+<p id="first-setup-hint">กรอกรหัสตั้งค่าครั้งแรกที่ผู้ดูแลได้รับ แล้วตั้งรหัสเข้าใช้งานที่คุณต้องการ</p>
+<div id="saved" class="success" role="status" hidden></div>
+<form id="setup" novalidate>
+<div id="current-field" class="field"><label id="current-label" for="current-password">รหัสผ่านปัจจุบัน</label><div class="input-wrap"><input id="current-password" type="password" autocomplete="current-password"></div></div>
+<div class="field"><label for="new-password">รหัสผ่านใหม่</label><div class="input-wrap"><input id="new-password" type="password" maxlength="128" autocomplete="new-password" placeholder="ตั้งรหัสผ่านที่คุณจำได้" aria-describedby="setup-error"></div></div>
+<div class="field"><label for="confirm-password">ยืนยันรหัสผ่านใหม่</label><div class="input-wrap"><input id="confirm-password" type="password" maxlength="128" autocomplete="new-password" placeholder="กรอกรหัสผ่านใหม่อีกครั้ง" aria-describedby="setup-error"></div></div>
+<label class="toggle-passwords"><input id="show-setup" type="checkbox">แสดงรหัสผ่าน</label>
+<div id="setup-error" class="error" role="alert" aria-live="polite"></div>
+<button class="submit" id="save-password" type="submit">บันทึกรหัสผ่าน</button>
+</form>
+<a class="secondary-button" href="../">ไปหน้าเข้าสู่ระบบ</a>
+<div class="hint">ใช้รหัสง่าย ๆ ได้ ไม่บังคับตัวใหญ่ ตัวเลข หรืออักขระพิเศษ</div>
+</section></div></main>
+<script type="module" src="../password-admin.mjs"></script>
+</body></html>

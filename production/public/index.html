@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>เข้าสู่ระบบ · GD Promotion</title>
+<link rel="stylesheet" href="./password.css">
+</head>
+<body>
+<div id="gate">
+<header class="brand"><div class="brand-icon">GD</div><div><strong>Promotion Dashboard</strong><small>ภาพรวมและรายสาขา · สิงหาคม 2026</small></div><span class="badge">สิงหาคม 2026</span></header>
+<main class="stage"><div><section class="card" role="dialog" aria-modal="true" aria-labelledby="title" aria-describedby="description">
+<div class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+<h1 id="title">กรอกรหัสผ่าน</h1><p id="description">เพื่อเข้าใช้งาน GD Promotion Dashboard</p>
+<form id="login" novalidate><label for="password">รหัสผ่าน</label><div class="input-wrap"><input id="password" type="password" placeholder="กรอกรหัสผ่านของคุณ" maxlength="128" autocomplete="current-password" aria-describedby="error" autofocus><button class="eye" id="show" type="button" aria-label="แสดงรหัสผ่าน" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div><div id="error" class="error" role="alert" aria-live="polite"></div><button class="submit" type="submit">เข้าใช้งาน</button></form>
+
+<div class="hint" id="password-hint">ใช้รหัสผ่านที่ผู้ดูแลตั้งไว้</div>
+</section></div></main>
+</div>
+<section id="workspace" hidden><div class="demo-toolbar"><strong>เข้าสู่ระบบสำเร็จ</strong><button id="logout" type="button">ออกจากระบบ</button></div><div id="dashboard"></div></section>
+<script type="module" src="./password-login.mjs"></script>
+</body></html>

@@ -1,0 +1,18 @@
+[build]
+  base = "production"
+  command = "npm test && npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+[build.environment]
+  NODE_VERSION = "22"
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["private/dashboard.html.gz"]
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "SAMEORIGIN"
+    Cache-Control = "no-store"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
