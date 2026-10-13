@@ -1,0 +1,20 @@
+# Report data and generated deploy artifacts never belong in the source repository.
+**/private/
+**/node_modules/
+**/.netlify/
+**/.env*
+**/reports/
+**/report-input/
+**/dist/
+**/coverage/
+*.gz
+*.zip
+*.7z
+*.tar
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.pdf
+*.bak
+admin-first-setup.txt

@@ -1,1 +1,16 @@
-{"name":"gd-promotion-production","private":true,"type":"module","engines":{"node":">=22.12.0"},"scripts":{"build":"node build.mjs","test":"node --test test/*.test.mjs"},"dependencies":{"@netlify/blobs":"11.0.3"}}
+{
+  "name": "gd-promotion-production",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check:source": "node scripts/check-source.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.0.3"
+  }
+}
