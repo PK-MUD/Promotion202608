@@ -10,8 +10,12 @@ Source, build configuration, and authentication tests are in `production/`. The 
 
 ## Report scope
 
-1–31 August 2026, 420 shops, 134 promotion codes. Promotion activity only. Net sales THB 17,947,207; quantity is report units/sets rather than receipts or customers. The build checks the reviewed snapshot SHA-256 before packaging.
+August 2026 promotion report. The approved manifest pins the exact SHA-256 and byte count; report contents and business totals are intentionally not repeated in source documentation. See [private build and safe rollout instructions](production/PRIVATE_REPORT_DEPLOY.md).
 
 ## Access
 
 Netlify serves the report only after successful authentication. The earlier report and its GitHub commit history were already published publicly and remain public. A new website password cannot revoke old public copies. Do not commit passwords, session tokens, or the local first-setup code.
+
+## Development safeguards
+
+Run `npm test --prefix production` and `node production/scripts/check-source.mjs`. Enable the local staged-file check with `git config core.hooksPath .githooks`. New source paths require review in `security/source-files.json`. These checks do not erase Git history or replace repository access controls.

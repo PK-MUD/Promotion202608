@@ -1,0 +1,20 @@
+name: Validate source and tests
+on:
+  pull_request:
+  push:
+    branches: [main, 'fix/**']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node production/scripts/check-source.mjs
+      - run: npm test --prefix production
+# No private report credentials, report download, artifact upload or deployment.
